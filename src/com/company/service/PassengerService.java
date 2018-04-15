@@ -27,4 +27,20 @@ public interface PassengerService {
     List<Passenger> queryAllPassenger();
 
     List<Passenger> queryPassengerByName(String txtname);
+
+    //插入后获取主键
+    int insertAndGetId(Passenger passenger);
+
+    //根据id获取用户不填充相应字段
+    Passenger selectPassengerByIdWithoutFill(int pid);
+
+    /*********************************************************************/
+    /**
+     * 4/14 新写的
+     * 查询联系电话
+     * @param pid
+     * @return
+     */
+    String queryContactPhoneNumber(int pid);
+
 }

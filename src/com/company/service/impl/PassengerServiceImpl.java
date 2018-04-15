@@ -76,4 +76,26 @@ public class PassengerServiceImpl  implements PassengerService{
     public List<Passenger> queryPassengerByName(String txtname) {
         return passengerMapper.queryPassengerByName(txtname);
     }
+
+    @Override
+    public int insertAndGetId(Passenger passenger) {
+        return passengerMapper.insertAndGetId(passenger);
+    }
+
+    @Override
+    public Passenger selectPassengerByIdWithoutFill(int pid) {
+        return passengerMapper.selectPassengerByIdWithoutFill(pid);
+    }
+
+    /******************************************************************************/
+    /**
+     * 4/14 新写
+     * 查询联系电话
+     * @param pid
+     * @return
+     */
+    @Override
+    public String queryContactPhoneNumber(int pid) {
+        return passengerMapper.queryContactPhoneNumber(pid);
+    }
 }
